@@ -245,3 +245,6 @@ Interpretasi kernel (misalnya kernel edge detector).
 Loss curve: apakah menurun stabil atau tidak.
 
 Debugging training dengan visualisasi.
+
+====================================================================
+

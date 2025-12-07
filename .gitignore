@@ -1,0 +1,73 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+.venv/
+venv/
+
+# Distribution / packaging
+.eggs/
+*.egg
+dist/
+build/
+sdist/
+*.whl
+*.egg-info/
+*.manifest
+
+# Log files
+*.log
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+mypy-report/
+
+# Flask specific files
+instance/
+
+# Other files and directories can be added as needed,
+# for example, IDE configuration files or data files.
+
+node_modules
+build
+npm-debug.log
+.nyc
+.env
+.DS_Store
+.idea
+coverage
+\*.log
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+*.~*
