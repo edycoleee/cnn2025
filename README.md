@@ -143,3 +143,105 @@ with tf.device('/GPU:0'):
 
 print(c)
 ```
+
+🧩 Tahapan Dasar CNN (dihubungkan ke script)
+1. Input Data (Gambar)
+Script: Membuat gambar 32×32, separuh atas hitam, separuh bawah putih.
+
+Konsep CNN: Input adalah matriks piksel (grayscale atau RGB).
+
+Yang perlu dipelajari:
+
+Representasi gambar sebagai array (nilai intensitas piksel).
+
+Normalisasi data (misalnya skala 0–1).
+
+Perbedaan grayscale vs RGB (channel).
+
+Bentuk input CNN: (height, width, channels).
+
+2. Kernel / Filter
+Script: Kernel acak 3×3.
+
+Konsep CNN: Filter kecil yang bergerak di atas gambar untuk mengekstrak fitur (tepi, tekstur, pola).
+
+Yang perlu dipelajari:
+
+Operasi konvolusi (matriks kernel digeser di atas gambar).
+
+Peran kernel dalam mendeteksi pola (horizontal edge, vertical edge, dll).
+
+Padding, stride, dan efek ukuran kernel.
+
+Hubungan kernel dengan feature map.
+
+3. Convolution Operation
+Script: cv2.filter2D(img, -1, kernel)
+
+Konsep CNN: Menghasilkan feature map dari input dengan kernel.
+
+Yang perlu dipelajari:
+
+Bagaimana konvolusi bekerja secara matematis.
+
+Feature map sebagai representasi fitur yang terdeteksi.
+
+Perbedaan convolution vs correlation.
+
+Multi-channel convolution (untuk RGB).
+
+4. Prediction & Loss Function
+Script: predict() → rata-rata feature map sebagai skor, lalu loss_fn() → MSE.
+
+Konsep CNN: CNN menghasilkan prediksi, lalu dibandingkan dengan target menggunakan fungsi loss.
+
+Yang perlu dipelajari:
+
+Fungsi loss umum: MSE, cross-entropy.
+
+Bagaimana loss mengukur “seberapa jauh” prediksi dari target.
+
+Peran loss dalam mengarahkan training.
+
+5. Backpropagation & Gradient
+Script: compute_grad() dengan finite difference.
+
+Konsep CNN: Gradien menunjukkan arah perubahan kernel agar loss menurun.
+
+Yang perlu dipelajari:
+
+Konsep turunan (derivative) dalam optimisasi.
+
+Backpropagation di CNN (chain rule).
+
+Numerical gradient vs analytical gradient.
+
+Bagaimana gradien memodifikasi kernel.
+
+6. Training Loop
+Script: 20 iterasi update kernel dengan kernel -= lr * grad.
+
+Konsep CNN: Kernel diperbarui sedikit demi sedikit agar lebih baik mendeteksi pola.
+
+Yang perlu dipelajari:
+
+Optimizer (SGD, Adam, RMSProp).
+
+Learning rate dan dampaknya.
+
+Epoch, batch size, iterasi.
+
+Overfitting vs generalisasi.
+
+7. Visualisasi Kernel & Loss
+Script: Plot kernel awal, tengah, akhir + plot loss.
+
+Konsep CNN: Visualisasi membantu memahami bagaimana kernel belajar dan loss menurun.
+
+Yang perlu dipelajari:
+
+Interpretasi kernel (misalnya kernel edge detector).
+
+Loss curve: apakah menurun stabil atau tidak.
+
+Debugging training dengan visualisasi.
