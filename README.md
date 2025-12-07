@@ -26,6 +26,7 @@ pip install matplotlib numpy
 pip install seaborn
 pip install scikit-learn
 pip install tensorflow
+pip install opencv-python
 pip install flask
 ```
 
